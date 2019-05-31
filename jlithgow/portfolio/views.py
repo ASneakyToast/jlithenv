@@ -1,15 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
+# from django.urls import reverse
 
 from .models import Section, Project
 
 
 def index(request):
-    full_table = Section.objects.all()
-    context = {'full_table': full_table}
+    table_of_contents = Section.objects.all()
+    context = {'full_table': table_of_contents}
     return render(request, 'portfolio/index.html', context)
 
 
-def section(request):
-    table_of_projects = Project.objects.all()
-    context = {'table_of_projects': table_of_projects}
+def section(request, section_id):
+    title = get_object_or_404(Section, pk=section_id)
+    context = {'section': title}
     return render(request, 'portfolio/section.html', context)
