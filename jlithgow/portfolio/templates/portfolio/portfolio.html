@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/style.css' %}">
+</head>
+<body>
+<div class="sideNav-container">
+    <div class="sideNav-header">
+        <img class="sideNav-header--profile" src="{% static 'portfolio/images/profile_user_white.svg' %}" alt="A profile picture of Joel Lithgow">
+        <p>Joel Lithgow</p>
+        <h5>/Portfolio</h5>
+    </div>
+    <div class="sideNav-body">
+        <ul>
+        {% for section in sections %}
+            <li class="sideNav-body--Section--Main color-background--{{ section.section_color }}"><a href="{% url 'portfolio:section' section.section_title%}">{{ section.section_title }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+</div>
+</body>
+</html>

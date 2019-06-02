@@ -1,0 +1,111 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'BrownStd';
+    src: url('fonts/lineto-brown-regular.eot');
+    src: url('fonts/lineto-brown-regular.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BrownStd';
+    src: url("fonts/lineto-brown-light.eot");
+    src: url("fonts/lineto-brown-light.woff") format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Normalize */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%
+}
+
+/* General Styles */
+
+* {
+    font-family: BrownStd, Helvetica, Arial, sans-serif;
+}
+
+p {
+    margin: 4px 0;
+}
+
+h6 {
+    font-size: 18px;
+    margin: 4px 0;
+}
+
+h5 {
+    font-size: 24px;
+    margin: 4px 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Side Navigation */
+
+.sideNav-container {
+    width: 220px;
+    height: 100%;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+}
+
+.sideNav-header {
+    padding: 8px 16px;
+    border-bottom: rgba(0,0,0,0.5) solid 1px;
+}
+
+.sideNav-header--profile {
+    width: 56px;
+    height: 56px;
+    border: #222222 solid 2px;
+    border-radius: 100%;
+    margin: 20px 0 12px 0;
+}
+
+.sideNav-body {
+    padding: 0 16px;
+    border-top: rgba(0,0,0,0.5) solid 1px;
+}
+
+.sideNav-body--Section--Main {
+    background-color: #656C6C;
+    padding: 8px 16px;
+    margin: 32px -24px 0 0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+}
+
+.sideNav-body--Section--Main:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+.sideNav-body--Section--Main > a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Overrides */
+
+.color-background--CF4520 {
+    background-color: #CF4520;
+}
+
+.color-background--007096 {
+    background-color: #007096;
+}
