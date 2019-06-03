@@ -4,6 +4,7 @@ from django.db import models
 class Section(models.Model):
     section_title = models.CharField(max_length=250)
     section_color = models.CharField(max_length=250, default='#656C6C')
+    section_description = models.CharField(max_length=250, default='No description provided.')
 
     def __str__(self):
         return self.section_title
@@ -15,6 +16,16 @@ class Project(models.Model):
 
     def __str__(self):
         return self.model_title
+
+
+class Piece(models.Model):
+    piece_title = models.CharField(max_length=250)
+    date_created = models.DateTimeField('date created')
+    description_quick = models.CharField(max_length=250)
+    image_cover = models.ImageField(upload_to='images/pieces/', default='pic_folder/None/no-img.jpg')
+
+    def __str__(self):
+        return self.piece_title
 
 # class Example(models.Model):
 #     author = Author.objects.get(name='Rod Dhl')
