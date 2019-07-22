@@ -1,7 +1,8 @@
 from django.contrib import admin
 
-from .models import Section, Project, Piece
+from .models import Tag, Deck, Strip, Frame
 
-admin.site.register(Section)
-admin.site.register(Project)
-admin.site.register(Piece)
+admin.site.register(Tag)
+admin.site.register(Deck)
+admin.site.register(Strip)
+admin.site.register(Frame)

@@ -31,6 +31,8 @@ class Tag(models.Model):
     tag_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     tag_name = models.CharField(max_length=250)
 
+    def __str__(self):
+        return self.tag_name
 
 #     Deck Data     #
 # ID
@@ -46,6 +48,9 @@ class Deck(models.Model):
     deck_title = models.CharField(max_length=250)
     deck_tags = models.ForeignKey(Tag, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.deck_title
+
 #     Strips Data     #
 # ID = Unique identifier
 # Title = "14_07_19", can only be one title
@@ -59,6 +64,9 @@ class Strip(models.Model):
     strip_title = models.CharField(max_length=250)
     strip_altText = models.CharField(max_length=447)
     strip_decks = models.ForeignKey(Deck, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.strip_title
 
 
 #     Frame Data     #
@@ -76,6 +84,8 @@ class Frame(models.Model):
     frame_title = models.CharField(max_length=250)
     frame_strips = models.ForeignKey(Strip, on_delete=models.CASCADE)
 
+    def __str__(self):
+        return self.frame_title
 
 # Old Data things #
 #

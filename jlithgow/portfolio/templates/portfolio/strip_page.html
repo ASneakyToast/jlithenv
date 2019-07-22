@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/style.css' %}">
+</head>
+<body>
+
+{% block main %}
+<div class="sideNav-container">
+
+    <div class="sideNav-header color-background--CF4520">
+        <p class="color-font--CF4520">Portfolio</p>
+{#        <h5>/{{ section.section_title }}</h5>#}
+    </div>
+
+    <div class="sideNav-body">
+        <ul>
+{#        {% for piece in pieces%}#}
+{#            <li class="sideNav-body--Project--Main"><a href="{% url 'portfolio:section' section.section_title%}">{{ piece.piece_title}}</a></li>#}
+{#        {% endfor %}#}
+        </ul>
+    </div>
+
+</div>
+
+<div class="mainNav-container">
+
+{#    <div class="mainNav-infoPanel color-background--{{ section.section_color }}">#}
+
+        <div class="mainNav-infoPanel--DescriptionBox">
+{#            <h4>{{ section.section_title }}:</h4>#}
+{#            <p>{{ section.section_description }}</p>#}
+        </div>
+
+{#    </div>#}
+
+
+    <div class="mainNav-cardDeck">
+
+    </div>
+
+</div>
+
+
+{% endblock main %}
+
+</body>
+</html>
