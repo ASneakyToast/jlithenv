@@ -1,6 +1,7 @@
 from django.db import models
 
 
+
 class Section(models.Model):
     section_title = models.CharField(max_length=250)
     section_color = models.CharField(max_length=250, default='#656C6C')
