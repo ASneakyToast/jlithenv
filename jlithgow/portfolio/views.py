@@ -12,7 +12,9 @@ def portfolio_index(request):
 
 def strip_page(request, strip_title):
     strip = get_object_or_404(Strip, strip_title=strip_title)
-    context = {'strip': strip}
+    tags = Tag.objects.all()
+    context = {'strip': strip,
+               'tags': tags}
     return render(request, 'portfolio/strip_page.html', context)
 
 # def table_of_contents(request):
@@ -24,7 +26,7 @@ def strip_page(request, strip_title):
 # def section_page(request, section_title):
 #     section = get_object_or_404(Section, section_title=section_title)
 #     projects = Project.objects.all()
-#     pieces = Piece.objects.all()
+#     frames = Piece.objects.all()
 #     context = {'section': section,
 #                'projects': projects,
 #                'pieces': pieces}

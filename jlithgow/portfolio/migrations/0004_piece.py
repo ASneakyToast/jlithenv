@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('piece_title', models.CharField(max_length=250)),
                 ('date_created', models.DateTimeField(verbose_name='date created')),
                 ('description_quick', models.CharField(max_length=250)),
-                ('image_cover', models.ImageField(default='pic_folder/None/no-img.jpg', upload_to='images/pieces/')),
+                ('image_cover', models.ImageField(default='pic_folder/None/no-img.jpg', upload_to='images/frames/')),
             ],
         ),
     ]

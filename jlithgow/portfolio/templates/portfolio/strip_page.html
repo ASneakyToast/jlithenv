@@ -13,16 +13,27 @@
 {% block main %}
 <div class="sideNav-container">
 
-    <div class="sideNav-header color-background--CF4520">
-        <p class="color-font--CF4520">Portfolio</p>
-{#        <h5>/{{ section.section_title }}</h5>#}
+    <div class="sideNav-appNav">
+        <h5>Joel Lithgow</h5>
+        <a href="{% url 'portfolio:index' %}"><h4>Portfolio</h4></a>
+        <div class="break"></div>
     </div>
 
-    <div class="sideNav-body">
+    <div class="sideNav-tagsNav">
         <ul>
-{#        {% for piece in pieces%}#}
-{#            <li class="sideNav-body--Project--Main"><a href="{% url 'portfolio:section' section.section_title%}">{{ piece.piece_title}}</a></li>#}
-{#        {% endfor %}#}
+            {% for tag in tags %}
+                <li class="tagsNav-tag">{{ tag.tag_name }}</li>
+            {% endfor %}
+        </ul>
+        <div class="break"></div>
+    </div>
+
+    <div class="sideNav-stripNav">
+        <h4>{{ strip.strip_title }}</h4>
+        <ul>
+            {% for frame in frames %}
+                <li class="stripNav-frame">{{ frame.frame_title }}</li>
+            {% endfor %}
         </ul>
     </div>
 
