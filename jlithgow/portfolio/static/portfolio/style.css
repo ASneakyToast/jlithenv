@@ -111,3 +111,68 @@ a {
 .tagsNav-tag {
 
 }
+
+/* Side Navigation */
+
+.mainNav-container {
+    margin-left: 220px;
+    padding: 24px 24px 0 24px
+
+
+}
+
+.mainNav-header {
+    margin-bottom: 16px;
+}
+
+.mainNav-header--parentPage {
+    font-size: 24px;
+    color: #656C6C;
+    margin: 4px 0;
+}
+
+.mainNav-header--currentPage {
+    font-size: 36px;
+    color: #000000;
+    margin: 4px 0;
+}
+
+
+.mainNav-search {
+    margin-bottom: 16px;
+}
+
+.mainNav-search--label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.mainNav-search--text_box {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 16px;
+    box-shadow: inset 0 2px 6px rgba(0,0,0,0.5);
+    border-radius: 3px;
+    border: none;
+}
+
+.mainNav-filters {
+    margin-bottom: 16px;
+}
+
+.mainNav-filters--label {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 4px 0;
+}
+
+.mainNav-results {
+
+}
+
+.mainNav-results--resultCount {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+

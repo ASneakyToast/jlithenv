@@ -13,20 +13,46 @@
 <div class="sideNav-container">
 
     <div class="sideNav-header">
-        <img class="sideNav-header--profile" src="{% static 'portfolio/images/profile_user_white.svg' %}" alt="A profile picture of Joel Lithgow">
         <p>Joel Lithgow</p>
         <h5>/Portfolio</h5>
     </div>
 
-    <div class="sideNav-body">
-        <ul>
-{#        {% for section in sections %}#}
-{#            <li class="sideNav-body--Section--Main color-background--{{ section.section_color }}"><a href="{% url 'portfolio:section' section.section_title%}">{{ section.section_title }}</a></li>#}
-{#        {% endfor %}#}
-        </ul>
+</div>
+
+<div class="mainNav-container">
+
+    <div class="mainNav-header">
+        <h2 class="mainNav-header--parentPage">Joel Lithgow</h2>
+        <h1 class="mainNav-header--currentPage">Portfolio</h1>
+    </div>
+
+    <div class="mainNav-search">
+        <p class="mainNav-search--label">Search</p>
+        <label>
+            <input class="mainNav-search--text_box">
+        </label>
+    </div>
+
+    <div class="mainNav-filters">
+        <p class="mainNav-filters--label">Selected Filters</p>
+    </div>
+
+    <div class="mainNav-results">
+        <h3 class="mainNav-results--resultCount">47 Results</h3>
+        <div class="mainNav-results--strips">
+            <article class="strip_card">
+                <div class="strip_card-frameStrip">
+                    <img src="../../../media/images/frames/1-29_04_19.png" alt="An image" class="strip_card-frameStrip--frame">
+                    <img src="../../../media/images/frames/1-29_04_19.png" alt="An image" class="strip_card-frameStrip--frame">
+                </div>
+                <p class="strip_card-title">Title here</p>
+                <p class="strip_card-description">A description goes here and it might have a lot of text or it might not have a lot.</p>
+            </article>
+        </div>
     </div>
 
 </div>
+
 
 </body>
 </html>
