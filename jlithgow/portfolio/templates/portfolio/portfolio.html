@@ -41,71 +41,20 @@
     <div class="mainNav-results">
         <h3 class="mainNav-results--resultCount">47 Results</h3>
         <div class="mainNav-results--strips">
-            <article class="strip_card">
+            {% for strip in strips %}
+                <article class="strip_card">
                 <div class="strip_card-frameStrip">
-                    {# TODO: replace img src with "{{ obj.photo.url }}" #}
-                    <img src="{% static 'portfolio/images/1-29_04_19.png' %}" alt="Yup" class="strip_card-frameStrip--frame">
-                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
-                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
+                  {% for frames in strip.strip_frames.all %}
+                        <img src="{{ frames.image.url }}" alt="Yup" class="strip_card-frameStrip--frame">
+                  {% endfor %}
                 </div>
-                <p class="strip_card-title">Title here</p>
+                <p class="strip_card-title">{{ strip.strip_title }}</p>
                 <div class="strip_card-descriptionWell">
-                    <p class="strip_card-descriptionWell--Description">A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and</p>
+                    <p class="strip_card-descriptionWell--Description">{{ strip.strip_altText }}</p>
                 </div>
                 <div class="strip_card-statusBar"></div>
             </article>
-            <article class="strip_card">
-                <div class="strip_card-frameStrip">
-                    {# TODO: replace img src with "{{ obj.photo.url }}" #}
-                    <img src="{% static 'portfolio/images/1-29_04_19.png' %}" alt="Yup" class="strip_card-frameStrip--frame">
-                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
-                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
-                </div>
-                <p class="strip_card-title">Title here</p>
-                <div class="strip_card-descriptionWell">
-                    <p class="strip_card-descriptionWell--Description">A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and</p>
-                </div>
-                <div class="strip_card-statusBar"></div>
-            </article>
-            <article class="strip_card">
-                <div class="strip_card-frameStrip">
-                    {# TODO: replace img src with "{{ obj.photo.url }}" #}
-                    <img src="{% static 'portfolio/images/1-29_04_19.png' %}" alt="Yup" class="strip_card-frameStrip--frame">
-                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
-                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
-                </div>
-                <p class="strip_card-title">Title here</p>
-                <div class="strip_card-descriptionWell">
-                    <p class="strip_card-descriptionWell--Description">A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and</p>
-                </div>
-                <div class="strip_card-statusBar"></div>
-            </article>
-            <article class="strip_card">
-                <div class="strip_card-frameStrip">
-                    {# TODO: replace img src with "{{ obj.photo.url }}" #}
-                    <img src="{% static 'portfolio/images/1-29_04_19.png' %}" alt="Yup" class="strip_card-frameStrip--frame">
-                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
-                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
-                </div>
-                <p class="strip_card-title">Title here</p>
-                <div class="strip_card-descriptionWell">
-                    <p class="strip_card-descriptionWell--Description">A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and</p>
-                </div>
-                <div class="strip_card-statusBar"></div>
-            </article>
-            <article class="strip_card">
-                <div class="strip_card-frameStrip">
-                    {# TODO: replace img src with "{{ obj.photo.url }}" #}
-                    <img src="{% static 'portfolio/images/1-29_04_19.png' %}" alt="Yup" class="strip_card-frameStrip--frame">
-                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
-                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
-                </div>
-                <p class="strip_card-title">Title here</p>
-                <div class="strip_card-descriptionWell">
-                    <p class="strip_card-descriptionWell--Description">A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and</p>
-                </div>
-                <div class="strip_card-statusBar"></div>
-            </article>
+            {% endfor %}
         </div>
     </div>
 
@@ -114,3 +63,6 @@
 
 </body>
 </html>
+
+{#Static example#}
+{#{% static 'portfolio/images/1-29_04_19.png' %}#}
