@@ -112,13 +112,11 @@ a {
 
 }
 
-/* Side Navigation */
+/* Main Navigation */
 
 .mainNav-container {
     margin-left: 220px;
     padding: 24px 24px 0 24px
-
-
 }
 
 .mainNav-header {
@@ -155,6 +153,7 @@ a {
     box-shadow: inset 0 2px 6px rgba(0,0,0,0.5);
     border-radius: 3px;
     border: none;
+    box-sizing: border-box;
 }
 
 .mainNav-filters {
@@ -171,8 +170,98 @@ a {
 
 }
 
+.mainNav-results--strips {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .mainNav-results--resultCount {
     font-size: 24px;
     margin-bottom: 16px;
 }
 
+/* strips_card */
+
+.strip_card {
+    flex: 1 0 20%;
+    margin: 12px 12px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    min-width: 240px;
+    max-width: 324px;
+    min-height: 150px;
+    transition: box-shadow 0.175s;
+    /*max-height: 150px;*/
+    /*border-bottom: solid 4px #edeeee;*/
+}
+
+/*TODO: implement responsive card sizing*/
+@media only screen and (max-width: 1172px) {
+    .strip_card {
+        flex: 1 0 30%;
+    }
+}
+
+/*TODO: implement hover states*/
+.strip_card:hover{
+    box-shadow: 0 4px 8px rgba(0,0,0,0.30);
+    /*border-bottom: solid 4px #007096;*/
+}
+
+.strip_card-title {
+    margin: 4px 8px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.strip_card-descriptionWell {
+    margin: 4px 8px;
+    margin-bottom: 0;
+    overflow: scroll;
+    max-height: 62px;
+}
+
+.strip_card-descriptionWell--Description {
+    font-weight: bold;
+    font-size: 14px;
+    color: #656C6C;
+}
+
+/*TODO: Fix scrollbar issues*/
+.strip_card-frameStrip {
+    background-color: #edeeee;
+    box-shadow: inset 0 1px 3px 0 rgba(0,0,0,0.5);
+    border-radius: 3px;
+    margin-bottom: 8px;
+    display: flex;
+    padding: 4px;
+    overflow: scroll;
+    /*scrollbar-base-color: #007096;*/
+}
+
+.strip_card-frameStrip--frame {
+    /*flex: 1;*/
+    display: inline-block;
+    /*width: 30%;*/
+    max-height: 51px;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+    margin: 4px;
+
+}
+
+.strip_card-statusBar {
+    display: block;
+    height: 4px;
+    background-color: #edeeee;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0 0 3px 3px;
+    width: 100%;
+    transition: background-color 0.175s;
+}
+
+/* Syntax */
+/*block_type-nextLevelDown--NextLevelDown---NextLevelDown__Modifier*/

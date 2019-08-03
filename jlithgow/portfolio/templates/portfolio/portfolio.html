@@ -28,9 +28,10 @@
 
     <div class="mainNav-search">
         <p class="mainNav-search--label">Search</p>
-        <label>
+{#       TODO: Why is this label thing here?#}
+{#        <label>#}
             <input class="mainNav-search--text_box">
-        </label>
+{#        </label>#}
     </div>
 
     <div class="mainNav-filters">
@@ -42,11 +43,68 @@
         <div class="mainNav-results--strips">
             <article class="strip_card">
                 <div class="strip_card-frameStrip">
-                    <img src="../../../media/images/frames/1-29_04_19.png" alt="An image" class="strip_card-frameStrip--frame">
-                    <img src="../../../media/images/frames/1-29_04_19.png" alt="An image" class="strip_card-frameStrip--frame">
+                    {# TODO: replace img src with "{{ obj.photo.url }}" #}
+                    <img src="{% static 'portfolio/images/1-29_04_19.png' %}" alt="Yup" class="strip_card-frameStrip--frame">
+                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
+                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
                 </div>
                 <p class="strip_card-title">Title here</p>
-                <p class="strip_card-description">A description goes here and it might have a lot of text or it might not have a lot.</p>
+                <div class="strip_card-descriptionWell">
+                    <p class="strip_card-descriptionWell--Description">A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and</p>
+                </div>
+                <div class="strip_card-statusBar"></div>
+            </article>
+            <article class="strip_card">
+                <div class="strip_card-frameStrip">
+                    {# TODO: replace img src with "{{ obj.photo.url }}" #}
+                    <img src="{% static 'portfolio/images/1-29_04_19.png' %}" alt="Yup" class="strip_card-frameStrip--frame">
+                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
+                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
+                </div>
+                <p class="strip_card-title">Title here</p>
+                <div class="strip_card-descriptionWell">
+                    <p class="strip_card-descriptionWell--Description">A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and</p>
+                </div>
+                <div class="strip_card-statusBar"></div>
+            </article>
+            <article class="strip_card">
+                <div class="strip_card-frameStrip">
+                    {# TODO: replace img src with "{{ obj.photo.url }}" #}
+                    <img src="{% static 'portfolio/images/1-29_04_19.png' %}" alt="Yup" class="strip_card-frameStrip--frame">
+                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
+                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
+                </div>
+                <p class="strip_card-title">Title here</p>
+                <div class="strip_card-descriptionWell">
+                    <p class="strip_card-descriptionWell--Description">A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and</p>
+                </div>
+                <div class="strip_card-statusBar"></div>
+            </article>
+            <article class="strip_card">
+                <div class="strip_card-frameStrip">
+                    {# TODO: replace img src with "{{ obj.photo.url }}" #}
+                    <img src="{% static 'portfolio/images/1-29_04_19.png' %}" alt="Yup" class="strip_card-frameStrip--frame">
+                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
+                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
+                </div>
+                <p class="strip_card-title">Title here</p>
+                <div class="strip_card-descriptionWell">
+                    <p class="strip_card-descriptionWell--Description">A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and</p>
+                </div>
+                <div class="strip_card-statusBar"></div>
+            </article>
+            <article class="strip_card">
+                <div class="strip_card-frameStrip">
+                    {# TODO: replace img src with "{{ obj.photo.url }}" #}
+                    <img src="{% static 'portfolio/images/1-29_04_19.png' %}" alt="Yup" class="strip_card-frameStrip--frame">
+                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
+                    <img src="{% static 'portfolio/images/1-29_04_19.png' %} " alt="An image" class="strip_card-frameStrip--frame">
+                </div>
+                <p class="strip_card-title">Title here</p>
+                <div class="strip_card-descriptionWell">
+                    <p class="strip_card-descriptionWell--Description">A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and A description goes here and</p>
+                </div>
+                <div class="strip_card-statusBar"></div>
             </article>
         </div>
     </div>
