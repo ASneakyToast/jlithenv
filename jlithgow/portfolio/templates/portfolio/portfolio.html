@@ -1,24 +1,8 @@
-<!DOCTYPE html>
+{% extends "base.html" %}
 
-{% load static %}
+{% block main %}
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'webpack_bundles/0.css' %}">
-</head>
-<body>
-
-<div class="sideNav-container">
-
-    <div class="sideNav-header">
-        <p>Joel Lithgow</p>
-        <h5>/Portfolio</h5>
-    </div>
-
-</div>
+{% include "portfolio/includes/navTree.html" %}
 
 <div class="mainNav-container">
 
@@ -58,12 +42,5 @@
             {% endfor %}
         </div>
     </div>
-
 </div>
-
-
-</body>
-</html>
-
-{#Static example#}
-{#{% static 'portfolio/images/1-29_04_19.png' %}#}
+{% endblock %}
