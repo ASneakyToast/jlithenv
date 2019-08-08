@@ -1,0 +1,14 @@
+.icon-container {
+  width: 24px;
+  height: 24px;
+  background-color: red;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.icon-symbol {
+  max-width: 16px;
+  max-height: 16px;
+  flex: 1;
+}

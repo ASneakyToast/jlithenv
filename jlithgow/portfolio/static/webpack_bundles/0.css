@@ -1,10 +1,40 @@
-p {
-  font-size: 32px;
-  color: red; }
+.icon-container {
+  width: 24px;
+  height: 24px;
+  background-color: red;
+  display: inline-flex;
+  justify-content: center;
+  align-content: center; }
 
-.mainNav-container {
-  background-color: red; }
+.icon-symbol {
+  max-width: 16px;
+  max-height: 16px;
+  flex: 1; }
 
-.p {
-  font-size: 20px; }
+/* Side Navigation */
+.break {
+  background-color: #656C6C;
+  height: 4px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+  margin: 12px 0; }
+
+.navTree-container {
+  padding: 8px 16px;
+  width: 188px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #edeeee;
+  box-shadow: inset -2px 0 6px rgba(0, 0, 0, 0.3); }
+
+.navTree-header--portfolio {
+  margin-bottom: 8px; }
+  .navTree-header--portfolio h1 {
+    font-size: 16px;
+    margin: 4px;
+    display: inline-block;
+    border-bottom: 2px solid red; }
+  .navTree-header--portfolio h2 {
+    font-size: 14px;
+    margin: 4px 0; }
 

@@ -1,0 +1,35 @@
+/* Side Navigation */
+
+.break {
+  background-color: #656C6C;
+  height: 4px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.5);
+  margin: 12px 0;
+}
+
+.navTree-container {
+  padding: 8px 16px;
+  width: 188px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  background-color: #edeeee;
+  box-shadow: inset -2px 0 6px rgba(0,0,0,0.3);
+}
+
+.navTree-header--portfolio {
+
+  margin-bottom: 8px;
+
+  h1 {
+    font-size: 16px;
+    margin: 4px;
+    display: inline-block;
+    border-bottom: 2px solid red;
+  }
+
+  h2 {
+    font-size: 14px;
+    margin: 4px 0;
+  }
+}
